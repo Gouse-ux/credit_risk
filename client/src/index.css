@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ebony: #323530;
+  --color-taupe: #88857d;
+  --color-cream: #e3d6ca;
+  --color-olive: #595421;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ebony);
+    color: var(--color-cream);
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Glassmorphism / Cards */
+.card-premium {
+  background: rgba(50, 53, 48, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 133, 125, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 12px;
+}
+
+.input-premium {
+  @apply bg-[#2a2d28] border border-taupe/30 rounded-lg px-4 py-2 text-cream focus:outline-none focus:border-olive transition-colors;
+}
+
+.btn-primary {
+  @apply bg-olive text-cream px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-taupe/20 text-cream px-6 py-2 rounded-lg font-semibold hover:bg-taupe/30 transition-all;
+}
